@@ -2,8 +2,8 @@ import pandas as pd
 import sqlite3
 
 # Load the Excel file
-file_path = '/Users/__nasrin__/Desktop/SQL db/240930_DECODE_Task1.5_List_Task&Methods_for_FS.xlsx'  # Update with the path to your workbook
-sheets = ['Methods T1.2', 'Methods T1.3', 'Methods T1.4', 'Methods T2.1', 'Methods T2.2', 'Methods T2.4']  # List your sheet names
+#file_path = '/Users/__nasrin__/Desktop/SQL db/240930_DECODE_Task1.5_List_Task&Methods_for_FS.xlsx'  # Update with the path to your workbook
+#sheets = ['Methods T1.2', 'Methods T1.3', 'Methods T1.4', 'Methods T2.1', 'Methods T2.2', 'Methods T2.4']  # List your sheet names
 
 # Create a connection to SQLite
 conn = sqlite3.connect('methods2.db')
