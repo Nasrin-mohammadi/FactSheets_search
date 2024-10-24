@@ -45,11 +45,14 @@ if not table_exists.empty:
 
     # Fetch and display the selected columns
     if selected_columns:
-        data = query_database('Methods', selected_columns, search_query)
-        if not data.empty:
-            st.write(data)
-        else:
-            st.write("No results found for the given search query.")
+        try:
+            data = query_database(selected_columns, search_query)  # Call without 'Methods'
+            if not data.empty:
+                st.write(data)
+            else:
+                st.write("No results found for the given search query.")
+        except Exception as e:
+            st.error(f"Error querying the database: {e}")
 else:
     st.error("Methods table does not exist in the database.")
 
